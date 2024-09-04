@@ -1,0 +1,9 @@
+statment = variable_declaration | assignment | if_statement
+variable_declaration = "int" identifier ";"
+assignment = identifier "=" expression ";"
+if_statement = "if" "(" condition ")" "{" statement "}"
+expression = term { ("+" | "-") term} ";"
+condition = identifer "==" expression
+term = identifier | num
+identifier = [a-zA-Z]
+num = [0-9]+
